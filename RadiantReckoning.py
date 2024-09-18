@@ -10,6 +10,7 @@ pygame.display.set_caption("Radiant Reckoning")
 
 gameover = False
 clock = pygame.time.Clock()
+joseph = Character(135, 276, "joseph", "sample", 20, 5, 5)
 
 #BEGIN GAME LOOP######################################################
 while not gameover:  # GAME LOOP############################################################
@@ -20,15 +21,10 @@ while not gameover:  # GAME LOOP################################################
     for event in gameEvents:  # quit game if x is pressed in top corner
         if event.type == pygame.QUIT:
             gameover = True
-
-    joseph = Character(135, 276, "joseph", "sample", 20, 5, 5)
-   
-
-
     #keyboard input-----------------------------------
   
 
-    joseph.move(gameEvents)
+    joseph.move()
      
     #render section-----------------------------------vis
     screen.fill((0,0,0))
